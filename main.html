@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My profile</title>
+    <link rel="stylesheet" href="abc.css">
+</head>
+<body>
+   <nav class="navbar">
+     <div class="innerd">
+        <ul class="ul">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+     </div>
+     <button type="submit" class="b1">Dark Theme</button>
+   </nav> 
+   <div >
+    <center ><h2 id="change-text">
+        I am a web developer
+    </h1></center>
+ </div>
+ <img src="./pexels-pixabay-268533.jpg">
+   <script>
+    
+
+
+    let btn=document.querySelector('button');
+    let wadu=document.getElementById('change-text');
+    let hex=document.getElementById('change-beta');
+    btn.addEventListener('click',()=>{
+        if (!document.body.style.backgroundColor &&
+        !wadu.style.color ){
+        document.body.style.backgroundColor="rgb(5, 15, 25)"
+     
+        wadu.style.color="white"
+        hex.style.color="gray"
+    }else{
+        document.body.style.backgroundColor=null
+        wadu.style.color=null
+    }
+    })
+    let change=true
+    setInterval(()=>{
+        
+        change===true?document.title="hello":document.title="noo"
+        // if (change===true){
+        //     document.title="hello world"
+        // }else{
+        //     document.title="bye bye"
+        // }
+        change=!change
+    },1000)
+   
+   </script>
+</body>
+</html>
